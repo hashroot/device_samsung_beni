@@ -184,6 +184,25 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/beni/prebuilt/etc/gps.conf:system/etc/gps.conf
 
+## Sensor
+PRODUCT_COPY_FILES += \
+    device/samsung/beni/prebuilt/gpsd:system/bin/gpsd \
+    device/samsung/beni/prebuilt/qmuxd:system/bin/qmuxd \
+    device/samsung/beni/prebuilt/gps.msm7x27.so:system/vendor/lib/hw/gps.msm7x27.so \
+    device/samsung/beni/prebuilt/gps.msm7x27.so:system/lib/hw/gps.msm7x27.so \
+    device/samsung/beni/prebuilt/gps.beni.so:system/lib/hw/gps.beni.so \
+    device/samsung/beni/prebuilt/lights.default.so:system/lib/hw/lights.default.so \
+    device/samsung/beni/prebuilt/sensors.beni.so:system/lib/hw/sensors.beni.so \
+    device/samsung/beni/prebuilt/gpsd:system/vendor/bin/gpsd \
+    device/samsung/beni/prebuilt/memsicd:system/bin/memsicd 
+
+## script
+PRODUCT_COPY_FILES += \
+    device/samsung/beni/prebuilt/01sysctl:system/etc/init.d/01sysctl \
+    device/samsung/beni/prebuilt/02beni:system/etc/init.d/02beni \
+    device/samsung/beni/prebuilt/04modules:system/etc/init.d/04modules \
+    device/samsung/beni/prebuilt/20userinit:system/etc/init.d/20userinit \
+    device/samsung/beni/prebuilt/99complete:system/etc/init.d/99complete
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
