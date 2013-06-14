@@ -17,13 +17,14 @@
 # Product-specific compile-time definitions.
 #
 
-include device/samsung/beni/BoardConfigCommon.mk
+include device/samsung/msm7x27-common/BoardConfigCommon.mk
+
+## Graphics
+TARGET_DISABLE_TRIPLE_BUFFERING := true
 
 ## Kernel, bootloader
 TARGET_BOOTLOADER_BOARD_NAME := beni
 TARGET_KERNEL_CONFIG := cyanogenmod_beni_defconfig
-
-## Assert
 TARGET_OTA_ASSERT_DEVICE := beni,GT-S5670
 
 ## Recovery
@@ -33,5 +34,7 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/beni/recovery/recovery_
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/beni/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/samsung/beni/recovery/recovery.rc
 TARGET_RECOVERY_FSTAB := device/samsung/beni/recovery/recovery.fstab
-TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/beni/recovery/recovery_kernel
+
+SMALLER_FONT_FOOTPRINT := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/beni/bluetooth
 
