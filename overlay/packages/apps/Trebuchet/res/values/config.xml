@@ -1,3 +1,4 @@
 <resources>
-    <bool name="allow_rotation">false</bool>
+    <bool name="config_hardwareAccelerated">true</bool>
+    <bool name="config_cyanogenmod">true</bool>
 </resources>
